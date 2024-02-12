@@ -28,7 +28,7 @@ A video demonstration can be found at this link: https://drive.google.com/file/d
 
 ## Credits
 
-Thanks goes to the University of Minnesota and Edx Bootcamp for providing the assistance needed to complete this project. I also would like to thank J. Bittner for assistance with the Employee Tracker ascii logo.
+Thanks goes to the University of Minnesota and Edx Bootcamp for providing the assistance needed to complete this project. 
 
 ## License
 
