@@ -3,6 +3,8 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const { INTEGER } = require('sequelize');
 
+// set up fields and rules for ProductTag model
+
 class ProductTag extends Model {}
 
 ProductTag.init(
