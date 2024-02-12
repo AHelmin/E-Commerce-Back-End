@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
   const tags = await Tag.findAll({
     include: [{
       model: Product,
-      as: 'tag_products'
     }]
   })
   res.json(tags);
@@ -20,7 +19,6 @@ router.get('/:id', async (req, res) => {
   const tags = await Tag.findByPk(req.params.id, {
     include: [{
       model: Product,
-      as: 'tag_products'
     }]
   })
   res.json(tags);
@@ -31,7 +29,7 @@ router.post('/', async (req, res) => {
   try {
     const tags = await Tag.create(req.body)
     res.json(tags);
-  } catch( err ) {
+  } catch (err) {
     res.status(500).json({ error: err.message })
   }
 });
@@ -40,7 +38,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const tags = await Tag.update(
-      req.body, 
+      req.body,
       {
         where: {
           id: req.params.id
@@ -48,7 +46,7 @@ router.put('/:id', async (req, res) => {
       }
     )
     res.json(tags)
-  } catch( err ){
+  } catch (err) {
     res.status(500).json({ error: err.message })
   }
 });
@@ -64,7 +62,7 @@ router.delete('/:id', async (req, res) => {
       }
     )
     res.json({ status: "ok" })
-  } catch( err ){
+  } catch (err) {
     res.status(500).json({ error: err.message })
   }
 });

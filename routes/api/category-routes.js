@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
   const categories = await Category.findAll({
     include: [{
       model: Product,
-      as: 'products'
     }]
   })
   res.json(categories);
@@ -19,7 +18,6 @@ router.get('/:id', async (req, res) => {
   const categories = await Category.findByPk(req.params.id, {
     include: [{
       model: Product,
-      as: 'products'
     }]
   })
   res.json(categories);
